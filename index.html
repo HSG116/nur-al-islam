@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نور الإسلام - التطبيق الشامل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- شريط التنقل العلوي -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>نور الإسلام</h1>
+                <p>دليلك الشامل للعبادات</p>
+            </div>
+            <div class="nav-links">
+                <button class="nav-btn active" data-section="home"><i class="fas fa-home"></i></button>
+                <button class="nav-btn" data-section="prayer-times"><i class="fas fa-clock"></i></button>
+                <button class="nav-btn" data-section="zakat"><i class="fas fa-calculator"></i></button>
+                <button class="nav-btn" data-section="sebha"><i class="fas fa-pray"></i></button>
+                <button class="nav-btn" data-section="azkar"><i class="fas fa-book-quran"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- محتوى الأقسام -->
+    <main>
+        <!-- قسم الرئيسية -->
+        <section id="home" class="content-section active">
+            <div class="hero-section">
+                <div class="welcome-message">
+                    <h2>مرحبًا بك في تطبيق نور الإسلام</h2>
+                    <p>اختر الخدمة المطلوبة من القائمة العلوية</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم أوقات الصلاة -->
+        <section id="prayer-times" class="content-section">
+            <iframe src="https://timesprayer.com/widgets.php?frame=1&lang=ar&name=cairo&avachang=true&fcolor=01132B&tcolor=01132B&frcolor=0F2444"></iframe>
+        </section>
+
+        <!-- قسم حاسبة الزكاة -->
+        <section id="zakat" class="content-section">
+            <div class="container">
+                <h1>حاسبة الزكاة</h1>
+                <label for="totalMoney">أدخل إجمالي مالك:</label>
+                <input type="number" id="totalMoney" placeholder="مثال: 10000">
+            <label for="currency">اختر العملة:</label>
+            <select id="currency">
+                <option value="SAR">ريال سعودي (SAR)</option>
+                <option value="USD">دولار أمريكي (USD)</option>
+                <option value="EUR">يورو (EUR)</option>
+                <option value="GBP">جنيه إسترليني (GBP)</option>
+                <option value="AED">درهم إماراتي (AED)</option>
+                <option value="EGP">جنيه مصري (EGP)</option>
+                <option value="KWD">دينار كويتي (KWD)</option>
+                <option value="QAR">ريال قطري (QAR)</option>
+                <option value="OMR">ريال عماني (OMR)</option>
+                <option value="BHD">دينار بحريني (BHD)</option>
+                <option value="JOD">دينار أردني (JOD)</option>
+            </select>
+
+                <button onclick="calculateZakat()">احسب الزكاة</button>
+                <div class="result" id="result"></div>
+            </div>
+        </section>
+
+        <!-- قسم المسبحة -->
+        <section id="sebha" class="content-section">
+            <div class="fluid-container">
+                <div id="shelf"></div>
+                <div id="head">مُسبح</div>
+                <div id="line">
+                    <p id="score">score: 0</p>
+                    <h1 id="tasbe7">سبحان الله و بحمده</h1>
+                </div>
+                <div onclick="count()" id="circle">
+                    <p id="text">ابدأ التسبيح</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأذكار -->
+        <section id="azkar" class="content-section">
+            <div class="azkar-grid"></div>
+            <iframe frameborder="0" width="100%" height="650" scrolling="no" src="http://hafiz.muslim-web.com/page/1"></iframe>
+        </section>
+    </main>
+
+    <!-- القائمة السفلية -->
+    <footer class="main-footer">
+        <p>&copy; 2024 نور الإسلام. جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
