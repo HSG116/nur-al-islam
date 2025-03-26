@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>نور الإسلام - التطبيق الشامل</title>
+    
+    <!-- ربط ملفات الأيقونات و الـ CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
@@ -49,20 +51,13 @@
                 <h1>حاسبة الزكاة</h1>
                 <label for="totalMoney">أدخل إجمالي مالك:</label>
                 <input type="number" id="totalMoney" placeholder="مثال: 10000">
-            <label for="currency">اختر العملة:</label>
-            <select id="currency">
-                <option value="SAR">ريال سعودي (SAR)</option>
-                <option value="USD">دولار أمريكي (USD)</option>
-                <option value="EUR">يورو (EUR)</option>
-                <option value="GBP">جنيه إسترليني (GBP)</option>
-                <option value="AED">درهم إماراتي (AED)</option>
-                <option value="EGP">جنيه مصري (EGP)</option>
-                <option value="KWD">دينار كويتي (KWD)</option>
-                <option value="QAR">ريال قطري (QAR)</option>
-                <option value="OMR">ريال عماني (OMR)</option>
-                <option value="BHD">دينار بحريني (BHD)</option>
-                <option value="JOD">دينار أردني (JOD)</option>
-            </select>
+                
+                <label for="currency">اختر العملة:</label>
+                <select id="currency">
+                    <option value="SAR">ريال سعودي (SAR)</option>
+                    <option value="USD">دولار أمريكي (USD)</option>
+                    <option value="EUR">يورو (EUR)</option>
+                </select>
 
                 <button onclick="calculateZakat()">احسب الزكاة</button>
                 <div class="result" id="result"></div>
@@ -96,6 +91,7 @@
         <p>&copy; 2024 نور الإسلام. جميع الحقوق محفوظة</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- ربط ملف الجافاسكريبت -->
+    <script src="assets/script.js"></script>
 </body>
 </html>
